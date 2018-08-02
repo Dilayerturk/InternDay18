@@ -9,19 +9,126 @@ namespace cSharp
 {
     class Program
     {
+        // 22. DECISION CONSTRUCTURS - SWITCH STATEMENT * * 
+        static void ExecuteSwitch()
+        {
+            Console.WriteLine("1 [C#], 2 [VB]");
+            Console.Write("Please pick your language preference: ");
+            string langChoice = Console.ReadLine();
+            switch (langChoice)
+            {
+                case "C#":
+                    Console.WriteLine("Good choice, C# is a fine language.");
+                    break;
+                case "VB":
+                    Console.WriteLine("VB: OOP, multithreading, and more!");
+                    break;
+                default:
+                    Console.WriteLine("Well...good luck with that!");
+                    break;
+            }
+        }
+
+        // 21. DECISION CONSTRUCTURS - IF * * 
+        //static void ExecuteIfElse()
+        //{
+        //    // This is illegal, given that Length returns an int, not a bool.
+        //    string stringData = "My textual data";
+        //    if (stringData.Length > 0)
+        //    {
+        //        Console.WriteLine("string is greater than 0 characters");
+        //    }
+        //}
+
+        // 20. DO WHILE LOOP * *
+        //static void ExecuteDoWhileLoop()
+        //{
+        //    string userIsDone = "";
+        //    do
+        //    {
+        //        Console.WriteLine("In do/while loop");
+        //        Console.Write("Are you done? [yes] [no]: ");
+        //        userIsDone = Console.ReadLine();
+        //    } while (userIsDone.ToLower() == "yes"); // Note the semicolon!
+        //}
+
+        // 19. WHILE LOOP * *
+        //static void ExecuteWhileLoop()
+        //{
+        //    string userIsDone = "";
+        //    // Test on a lower-class copy of the string.
+        //    while (userIsDone.ToLower() == "yes")
+        //    {
+        //        Console.Write("Are you done? [yes] [no]: ");
+        //        userIsDone = Console.ReadLine();
+        //        Console.WriteLine("In while loop");
+        //    }
+        //}
+
+        // 18. FOREACH LOOP * * 
+        //static void ForAndForEachLoop()
+        //{
+        //    string[] carTypes = { "Ford", "BMW", "Yugo", "Honda" };
+        //    foreach (string c in carTypes)
+        //        Console.WriteLine(c);
+        //    int[] myInts = { 10, 20, 30, 40 };
+        //    foreach (int i in myInts)
+        //    {
+        //        Console.WriteLine(i);
+        //    }
+        //}
+
+        // 17. THE FOR LOOP * *
+        //static void ForAndForEachLoop()
+        //{
+        //    for (int i = 0; i < 4; i++)
+        //    {
+        //        Console.WriteLine("Number is: {0} ", i);
+        //    }
+        //}
+
+        // 16. USEFULNESS OF IMPLICITY TYPED LOCAL VARIABLES + LINQ USAGE * * 
+        //static void QueryOverInts()
+        //{
+        //    int[] numbers = { 10, 20, 30, 40, 1, 2, 3, 8 };
+        //    // LINQ query!
+        //    var subset = from i in numbers where i < 10 select i;
+        //    Console.Write("Values in subset: ");
+        //    foreach (var i in subset)
+        //    {
+        //        Console.Write("{0} ", i);
+        //    }
+        //    Console.WriteLine();
+        //    Console.WriteLine("subset is a: {0}", subset.GetType().Name);
+        //    Console.WriteLine("subset is defined in: {0}", subset.GetType().Namespace);
+        //}
+
+        // 15. UNDERSTANDING IMPLICITY TYPED LOCAL VARIABLES * *
+        //static void DeclareImplicitVars()
+        //{
+        //    // Implicitly typed local variables.
+        //    Console.WriteLine("IMPLICIT TYPED LOCAL VARIABLES");
+        //    var myInt = 0;
+        //    var myBool = true;
+        //    var myString = "Time, marches on...";
+        //    // Print out the underlying type.
+        //    Console.WriteLine("myInt is a: {0}", myInt.GetType().Name);
+        //    Console.WriteLine("myBool is a: {0}", myBool.GetType().Name);
+        //    Console.WriteLine("myString is a: {0}", myString.GetType().Name);
+        //}
 
         // 14. NARROWING AND WIDENING DATA TYPE CONVERSION * * 
-        static int Add(int x, int y)
-        { return x + y; }
+        //static int Add(int x, int y)
+        //{ return x + y; }
 
-        static void NarrowingAttempt()
-        {
-            byte myByte = 0;
-            int myInt = 200;
-            // Explicitly cast the int into a byte (no loss of data).
-            myByte = (byte)myInt;
-            Console.WriteLine("Value of myByte: {0}", myByte);
-        }
+        //static void NarrowingAttempt()
+        //{
+        //    byte myByte = 0;
+        //    int myInt = 200;
+        //    // Explicitly cast the int into a byte (no loss of data).
+        //    myByte = (byte)myInt;
+        //    Console.WriteLine("Value of myByte: {0}", myByte);
+        //}
 
         // 13. SYSTEM.TEXT.STRINGBUILDER TYPE * *
         //static void FunWithStringBuilder()
@@ -265,15 +372,46 @@ namespace cSharp
             //Console.ReadLine();
 
             // 14. NARROWING AND WIDENING DATA TYPE CONVERSION * * 
-            Console.WriteLine("NARROWING AND WIDENING DATA TYPE CONVERSION");
-            // Add two shorts and print the result.
-            short numb1 = 3000;
-            short numb2 = 3000;
-            short answer = (short)Add(numb1, numb2);
-            Console.WriteLine("{0} + {1} = {2}", numb1, numb2, answer);
-            NarrowingAttempt();
-            Console.ReadLine();
+            //Console.WriteLine("NARROWING AND WIDENING DATA TYPE CONVERSION");
+            //// Add two shorts and print the result.
+            //short numb1 = 3000;
+            //short numb2 = 3000;
+            //short answer = (short)Add(numb1, numb2);
+            //Console.WriteLine("{0} + {1} = {2}", numb1, numb2, answer);
+            //NarrowingAttempt();
+            //Console.ReadLine();
 
+            // 15. UNDERSTANDING IMPLICITY TYPED LOCAL VARIABLES * *
+            //DeclareImplicitVars();
+            //Console.ReadLine();
+
+            // 16. USEFULNESS OF IMPLICITY TYPED LOCAL VARIABLES + LINQ USAGE * * 
+            //QueryOverInts();
+            //Console.ReadLine();
+
+            // 17. THE FOR LOOP * *
+            //ForAndForEachLoop();
+            //Console.ReadLine();
+
+            // 18. FOREACH LOOP * * 
+            //ForAndForEachLoop();
+            //Console.ReadLine();
+
+            // 19. WHILE LOOP * *
+            //ExecuteWhileLoop();
+            //Console.ReadLine();
+
+            // 20. DO WHILE LOOP * *
+            //ExecuteDoWhileLoop();
+            //Console.ReadLine();
+
+            // 21. DECISION CONSTRUCTURS - IF * * 
+            //ExecuteIfElse();
+            //Console.ReadLine();
+
+            // 22. DECISION CONSTRUCTURS - SWITCH STATEMENT * * 
+            ExecuteSwitch();
+            Console.ReadLine();
         }
 
 
